@@ -1,0 +1,12 @@
+* Orgmode
+
+To make the scripts in 'slides' work, it is best (on OS X) to install
+emacs via brew, either
+
+   brew install emacs
+
+or 
+
+   brew install emacs --with-cocoa
+
+to get the GUI version.

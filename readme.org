@@ -1,0 +1,13 @@
+* mtheme
+
+good looking beamer theme: https://github.com/matze/mtheme
+
+Install via
+
+git clone https://github.com/matze/mtheme
+cd mtheme
+make sty
+make install
+texhash
+
+then use \usetheme{metropolis}
