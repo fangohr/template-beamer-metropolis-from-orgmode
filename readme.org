@@ -1,12 +1,24 @@
-* Orgmode
+* template-beamer-metropolis-from-orgmode
 
-To make the scripts in 'slides' work, it is best (on OS X) to install
-emacs via brew, either
+* Home page
 
-   brew install emacs
+https://github.com/fangohr/template-beamer-metropolis-from-orgmode
 
-or 
+* What does this repository do?
 
-   brew install emacs --with-cocoa
+Provides a template setup to create
 
-to get the GUI version.
+Beamer pdf slides (https://en.wikipedia.org/wiki/Beamer_(LaTeX))
+
+in the
+
+Metropolis theme (https://github.com/matze/mtheme)
+
+from Emacs' ~org-mode~  (http://orgmode.org)
+
+
+* Author of this template
+
+Hans Fangohr
+
+Thanks to Sam Sinayoko, Oliver Laslett, and Maximilian Albert

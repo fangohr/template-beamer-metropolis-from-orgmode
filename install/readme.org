@@ -11,3 +11,21 @@ make install
 texhash
 
 then use \usetheme{metropolis}
+
+
+* Emacs
+
+
+To make the scripts in 'slides' work, it is best (on OS X) to install
+emacs via brew, either
+
+   brew install emacs
+
+or
+
+   brew install emacs --with-cocoa
+
+to get the GUI version.
+
+
+Tested with Emacs 25.4, May 2016
