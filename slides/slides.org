@@ -1,0 +1,300 @@
+#+TITLE:     Creating metropolis theme beamers slides from orgmode
+#+AUTHOR:    Hans Fangohr
+#+EMAIL:     fangohr@soton.ac.uk
+#+DATE:      2016-05-08
+#+LANGUAGE:  en
+#+OPTIONS:   H:2 num:t toc:t \n:nil ::t |:t ^:t -:t f:t *:t tex:t d:(HIDE) tags:not-in-toc <:t
+#+OPTIONS:   d:nil todo:t pri:nil
+#+STARTUP: beamer
+#+LATEX_HEADER: \usetheme{metropolis}
+#+LATEX_HEADER: \metroset{block=fill}
+
+# #+BEAMER_THEME: Rochester [height=20pt]
+
+* This document
+
+** Acknowledgements
+- Thanks to Sam Sinayoko for introducing orgmode to beamer
+- Thanks to Oliver Laslett for pointing me to the metropolis theme
+
+** This document
+- random selection of slides
+- demonstrating a variety of contents
+- source file is in Emacs's ~org-mode~
+- which is translated to tex
+- which is translated to pdf
+
+* C Programming on Windows with Quincy
+** Quincy
+- Easy way of programming on windows
+- Can edit, compile and execute C ( or C++ or Fortran)
+- Some more advanced features:
+  + GUI
+  + koolplot
+- Website: http://www.codecutter.net/tools/quincy/
+** Hello World with Quincy
+#+BEGIN_SRC c :exports both :results output
+  #include <stdio.h>
+
+  int main() {
+    /* Be nice and say "hello". Leave \nicely too. */
+    printf("Hello World!\n");
+    return 0;
+  }
+#+END_SRC
+- *F5* to compile
+- *F9* to execute
+** Setting up Quincy
+- See http://www.soton.ac.uk/~feeg6002/quincy.html
+- Use ANSI 90 standard and, with all warnings, and be strict (warnings -> errors)
+
+  : -ansi -Wall -pedantic
+** Use the command line 1
+- Get the command line with: Start > Search for 'cmd'
+- Basic commands (replace "<...>" by what you want):
+  | =gcc=                  | C compiler                         |
+  | =cd <dirname>=         | change (go to) directory /dirname/ |
+  | =dir=                  | list contents of current directory |
+  | =help <cmd>=           | get help about /cmd/               |
+  | =rename <old> <new>=   | rename a file or folder            |
+  | =mkdir <newdir>=       | make directory /newdir/            |
+  | =move <file1> <file2>= | move /file1/ to /file2/            |
+  | =del <file>=           | delete  /file/                     |
+
+** Use the command line 2
+
+- Compile the program
+
+  #+BEGIN_SRC sh :exports code
+  gcc -ansi -Wall -pedantic -o hello hello.c
+  #+END_SRC
+
+  #+RESULTS:
+
+
+* C Programming with Emacs
+** Why Emacs?
+- The oldest text editor in existence (1976, Stallmanand & Steele)
+- Still being updated an improved (current version is 24.4)
+- Looks modest is extremely powerful
+  + 30 programming languages built in
+  + Comes with a command line / shell (eshell)
+  + Explore the file system and copy/rename/delete etc files (dired)
+  + Note taking (Org-mode)
+  + Time management (Org-mode, Org-Mobile)
+  + Spreadsheets (Org-mode)
+  + LaTeX (AUCTeX)
+  + Advanced calculator (Calc)
+  + Email reader (Gnus)
+  + ...
+  + Comes with > 2000 optional packages
+** Why Emacs?
+- Cross platform (Linux, OSX, Windows...)
+- Can be used with GUI or on the command line: very useful for engineers / scientists
+- It is easily extensible so you can adapt it to your needs
+http://emacsrocks.com/e13.html
+** Installing Emacs
++ EmacsPortableApp (fits on memory stick for use on university computers): http://mlf176f2.github.io/EmacsPortable.App/
++ Binaries for windows: http://emacsbinw64.sourceforge.net/
++ Binaries for OSX: http://emacsformacosx.com/ or Aquamacs
++ Official website: http://www.gnu.org/software/emacs/
++ Getting help: http://www.emacswiki.org/
+** Emacs basics
+- In Emacs, "C-" means "Ctrl+" and "M-" means "Alt+".
+- Use "M-x <cmd>" to run a command if you know its name. Use TAB for completion.
+| =C-x C-f=     | open or create file                                      |
+| =C-x C-s=     | save file                                                |
+| =M-x compile= | compile file (type the command you need the first time). |
+| =M-x eshell=  | run the code in eshell                                   |
+** Emacs buffers
+Each file is displayed in a buffer.
+| =C-x b= | Switch to another buffer  |
+| =C-x 2= | Split buffer horizontally |
+| =C-x 3= | Split buffer vertically   |
+| =C-x 1= | Maximize the buffer       |
+
+* Beamer practice
+** A Basic slide
+A basic slide with some list
+- Item 1
+- Item 2
+** Blocks
+*** A normal block
+- Use =@@beamer: arbitrary-command@@= to include an arbitrary LaTeX/Beamer command.
+- Use =*test*= for *alert*
+- Use =/italics/= for /italics/
+- Use =C-c C-b= to change the type of block.
+*** An alert block                                             :B_alertblock:
+:PROPERTIES:
+:BEAMER_env: alertblock
+:END:
+An altert block.
+*** "An example"                                :B_example:
+:PROPERTIES:
+:BEAMER_env: example
+:END:
+
+This is an example.
+
+** Babel
+   :PROPERTIES:
+   :BEAMER_OPT: t
+   :END:
+*** Python code                                               :BMCOL:B_block:
+#+begin_src python  :exports both :results output
+A = [1, 2, 3, 4]
+print A[::-1]
+#+end_src
+*** C code
+#+BEGIN_SRC c :exports both
+  #include <stdio.h>
+
+  int main() {
+    printf("Hello World\n");
+    return 0;
+  }
+#+END_SRC
+
+#+RESULTS:
+: Hello World
+
+** Shell script variables
+*** Basic syntax
+- No need to declare variable type as in C.
+- By default everything is a string
+- Variables are defined and used like this
+#+BEGIN_SRC sh :exports both
+NAME=Worldtest
+echo Hello $NAME
+#+END_SRC
+
+#+RESULTS:
+: Hello World
+Notes:
+- *no space* around equal sign.
+- Use dollar sign *$* to expand variable name.
+
+
+** Lisp Example
+#+BEGIN_SRC emacs-lisp
+       (defun org-xor (a b)
+          "Exclusive or."
+          (if a (not b) b))
+#+END_SRC
+
+** Python Example
+
+
+#+BEGIN_SRC python :results output
+    def Hello(name):
+         print("Hello {}".format(name))
+         return None
+
+    def msum(n):
+        return n + 10
+
+    print(msum(4))
+#+END_SRC
+
+#+RESULTS:
+: 14
+
+** Python example, capturing return value
+
+#+BEGIN_SRC python :results value
+    def Hello(name):
+         print("Hello {}".format(name))
+         return None
+
+    def msum(n):
+        return n + 10
+
+    print(msum(4))
+    return msum(10)
+#+END_SRC
+
+#+RESULTS:
+: 20
+
+
+** Execute shell command
+#+BEGIN_SRC sh :results output
+echo "Hello World"
+#+END_SRC
+
+#+RESULTS:
+: Hello World
+
+** Execute py.test via shell
+#+BEGIN_SRC sh :exports results :results output
+py.test source.py
+#+END_SRC
+
+#+RESULTS:
+: ============================= test session starts ==============================
+: platform darwin -- Python 3.5.0, pytest-2.8.1, py-1.4.30, pluggy-0.3.1
+: rootdir: /Users/fangohr/gitdocs/teaching-software-engineering/slides/template, inifile:
+: collected 1 items
+:
+: source.py .
+:
+: =========================== 1 passed in 0.01 seconds ===========================
+
+
+
+** Another python example with include
+
+#+INCLUDE: "source.py" src python
+
+
+** Another python example with include, smaller font
+\tiny
+#+INCLUDE: "source.py" src python
+
+** pytest test
+#+BEGIN_SRC sh  :exports both :results output
+echo "Hello"
+py.test
+echo
+#+END_SRC
+
+#+RESULTS:
+: Hello
+: ============================= test session starts ==============================
+: platform darwin -- Python 3.5.0, pytest-2.8.1, py-1.4.30, pluggy-0.3.1
+: rootdir: /Users/fangohr/gitdocs/teaching-software-engineering/slides/template, inifile:
+: collected 0 items
+:
+: ===============================  in 0.01 seconds ===============================
+:
+
+
+** Block example: Verification and Validation
+*** Validation                                                    :B_block:
+:PROPERTIES:
+:BEAMER_env: block
+:END:
+Have we got the right product?
+
+(Does the product fulfill the requirements of the customer?)
+
+*** Verification                                                  :B_block:
+:PROPERTIES:
+:BEAMER_env: block
+:END:
+Have we got the product right?
+
+(Does the code do what the specification says?)
+
+** More blocks
+*** Test                                                        :B_example:
+:PROPERTIES:
+:BEAMER_env: example
+:END:
+Test example
+
+*** Test alert block                                         :B_alertblock:
+:PROPERTIES:
+:BEAMER_env: alertblock
+:END:
+Need some text that is an alert
