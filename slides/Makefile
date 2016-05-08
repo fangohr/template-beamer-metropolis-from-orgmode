@@ -6,7 +6,7 @@ force:
 	make slides.pdf
 
 clean:
-	rm *.tex *.pdf *.tex~
+	rm -f *.tex *.pdf *.tex~
 	rm -rf _minted-*
 	rm -rf .hypothesis
 
