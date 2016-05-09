@@ -13,12 +13,12 @@
 (require 'ox-latex)
 
 ;; Define an interactive function for easy testing
-(defun org-beamer-export-to-pdf-directory (dirname)
-  "Export all org files in directory `dirname' to pdf"
+(defun org-beamer-export-to-pdf-directory (files)
+  "Export all `files' to pdf"
   (interactive "DExport org files to pdf in directory:")
   (save-excursion
     (let ((org-files-lst ))
-      (dolist (org-file (directory-files dirname nil "\.org$"))
+      (dolist (org-file files)
 	(message "*** Exporting file %s ***" org-file)
 	(find-file org-file)
 	(org-beamer-export-to-pdf)
@@ -63,4 +63,4 @@
 (setq org-latex-inputenc-alist '(("utf8" . "utf8x")))
 
 ;; Export all org files
-(org-beamer-export-to-pdf-directory ".")
+(org-beamer-export-to-pdf-directory argv)

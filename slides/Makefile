@@ -1,5 +1,5 @@
 slides.pdf: slides.org
-	./org-files-to-pdf.el
+	./org-files-to-pdf.el slides.org
 
 force:
 	rm slides.pdf
