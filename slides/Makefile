@@ -15,7 +15,7 @@ manual:
 
 skim: slides.org
 	touch skim
-	./org-files-to-pdf.el
+	./org-files-to-pdf.el slides.org
 	cp slides.pdf slides-skim.pdf
 
 skim-start:
