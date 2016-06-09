@@ -13,6 +13,9 @@ texhash
 then use \usetheme{metropolis}
 
 
+Install 'firasans' font for the theme to look extra slick (for now) [https://www.fontsquirrel.com/fonts/fira-sans]
+
+
 * Emacs
 
 
