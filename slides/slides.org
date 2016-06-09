@@ -8,6 +8,7 @@
 #+STARTUP: beamer
 #+LATEX_HEADER: \usetheme{metropolis}
 #+LATEX_HEADER: \metroset{block=fill}
+#+LATEX_HEADER: \setbeamertemplate{frame footer}{\color{lightgray}Some Author - Some Conference}
 
 # #+BEAMER_THEME: Rochester [height=20pt]
 
