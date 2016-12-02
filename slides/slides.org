@@ -8,6 +8,7 @@
 #+STARTUP: beamer
 #+LATEX_HEADER: \usetheme{metropolis}
 #+LATEX_HEADER: \metroset{block=fill}
+#+LATEX_HEADER: \setbeamertemplate{frame footer}{\color{lightgray}Some Author - Some Conference}
 
 # #+BEAMER_THEME: Rochester [height=20pt]
 
@@ -135,6 +136,30 @@ An altert block.
 :END:
 
 This is an example.
+
+** Columns
+*** Left column - title not visible                                :B_column:
+    :PROPERTIES:
+    :BEAMER_env: column
+    :BEAMER_col: 0.75
+    :END:
+
+- Python (further discussion later)
+  - user interface to please scientists
+  - interactive (interpreted)
+
+- Computational libraries PETSc, Parmetis, Sundials, MPI
+  - re-use existing code where possible
+
+
+*** Right column - title not visible                               :B_column:
+    :PROPERTIES:
+    :BEAMER_env: column
+    :BEAMER_col: 0.34
+    :END:
+- short
+- items
+- here
 
 ** Babel
    :PROPERTIES:

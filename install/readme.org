@@ -13,6 +13,18 @@ texhash
 then use \usetheme{metropolis}
 
 
+Install 'firasans' font for the theme to look extra slick (for now)
+[https://www.fontsquirrel.com/fonts/fira-sans]
+
+To make use of this font, we need to use the 'xelatex' command, not
+'pdflatex'. This command is in the slides/org-files-to-pdf.el file,
+and can be changed to `pdflatex` if xelatex is not available.
+
+See
+http://mirror.ox.ac.uk/sites/ctan.org/macros/latex/contrib/beamer-contrib/themes/metropolis/doc/metropolistheme.pdf
+for details.
+
+
 * Emacs
 
 

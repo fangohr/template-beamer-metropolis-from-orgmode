@@ -33,9 +33,12 @@
 (add-to-list 'org-latex-packages-alist '("" "fancyvrb"))
 (setq org-latex-listings 'minted)
 (setq org-latex-pdf-process
-      '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
-	"pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
-	"pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
+;;      '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+;;	"pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+;;	"pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
+'("xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+  "xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+  "xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
 (setq org-latex-minted-options
       '(("bgcolor" "white") ("frame" "lines")))
 
