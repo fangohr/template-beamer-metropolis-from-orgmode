@@ -18,7 +18,7 @@ skim: slides.org
 	./org-files-to-pdf.el slides.org
 	cp slides.pdf slides-skim.pdf
 
-skim-start:
+watch:
 	make skim
 	open -a skim slides-skim.pdf
 	watch -n 1 make skim
