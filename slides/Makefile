@@ -16,9 +16,8 @@ manual:
 skim: slides.org
 	touch skim
 	./org-files-to-pdf.el slides.org
-	cp slides.pdf slides-skim.pdf
 
 watch:
 	make skim
-	open -a skim slides-skim.pdf
+	open -a skim slides.pdf
 	watch -n 1 make skim
