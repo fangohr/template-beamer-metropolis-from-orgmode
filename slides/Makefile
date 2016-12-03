@@ -1,9 +1,16 @@
-slides.pdf: slides.org
-	./org-files-to-pdf.el slides.org
+slides.pdf: slides.tex
+	xelatex -shell-escape slides.tex
+
+
+slides.tex: slides.org
+	#./org-files-to-pdf.el slides.org
+	emacs --script ./org-files-to-tex.el *.org
 
 force:
-	rm slides.pdf
+	rm -f slides.pdf slides.tex
 	make slides.pdf
+	make manual
+	make manual
 
 clean:
 	rm -f *.tex *.pdf *.tex~
@@ -11,11 +18,11 @@ clean:
 	rm -rf .hypothesis
 
 manual:
-	pdflatex -shell-escape slides.tex
+	xelatex -shell-escape slides.tex
 
 skim: slides.org
 	touch skim
-	./org-files-to-pdf.el slides.org
+	make slides.pdf
 
 watch:
 	make skim
