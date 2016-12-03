@@ -47,6 +47,9 @@
 ;;(add-to-list 'org-export-filter-final-output-functions
 ;;	     'org-latex-filter-fancyvrb)
 
+;; Make the code blocks look nicer
+(add-to-list 'org-latex-packages-alist '("" "minted"))
+(setq org-latex-listings 'minted)
 
 ;; the next section allows to add :ignoreheading: to section headers,
 ;; and the heading will be removed in the latex output, but the section
