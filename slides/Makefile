@@ -26,3 +26,4 @@ watch:
 	make skim
 	open -a skim slides.pdf
 	watch -n 1 make skim
+
