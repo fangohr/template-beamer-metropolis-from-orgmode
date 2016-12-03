@@ -323,3 +323,9 @@ Test example
 :BEAMER_env: alertblock
 :END:
 Need some text that is an alert
+* COMMENT Ignoring headings (this doesn't work at the moment, see org-files-to-tex.el)
+** Ignoring headings slide
+*** Visible heading 1
+Visible body 1
+*** Invisible heading 2 :ignoreheading:
+Visible body 2 (this doesn't seem to work for slides yet)

@@ -39,13 +39,16 @@
 ;; reader.
 (defun sa-ignore-headline (contents backend info)
   "Ignore headlines with tag `ignoreheading'."
+  ;;(message "*** debug: working on ignoreheading")
   (when (and (org-export-derived-backend-p backend 'latex 'html 'ascii)
              (string-match "\\(\\`.*\\)ignoreheading\\(.*\n\\)"
                            (downcase contents)))
                                         ;(replace-match "\\1\\2" nil nil contents)  ;; remove only the tag ":ignoreheading:" but keep the rest of the headline
     (replace-match "" nil nil contents)        ;; remove entire headline
+    (message "*** replacing header")
     ))
 (add-to-list 'org-export-filter-headline-functions 'sa-ignore-headline)
+;; Note: This ^doesn't seem to work at the moment; needs fixing. Dec 2016
 
 ;; Use utf8x for LaTeX export to access more unicode characters
 (setq org-latex-inputenc-alist '(("utf8" . "utf8x")))
