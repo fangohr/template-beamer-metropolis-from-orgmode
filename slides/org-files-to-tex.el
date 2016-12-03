@@ -78,3 +78,15 @@
 
 ;; Export all org files given on the command line
 (org-beamer-export-to-pdf-directory argv)
+
+
+
+;; Currently unused but potentially useful?
+;;
+;; Don't evaluate the blocks
+;; (all the results must evaluated beforehand and the results stored in the org file)
+;; (setq org-export-babel-evaluate nil)
+
+;; Add the environment "onlyenv" to display something only on certain slides
+;;(add-to-list 'org-beamer-environments-extra
+;;             '("onlyenv" "O" "\\begin{onlyenv}%a" "\\end{onlyenv}"))
