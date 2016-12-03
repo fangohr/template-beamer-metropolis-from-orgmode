@@ -51,6 +51,11 @@
 (add-to-list 'org-latex-packages-alist '("" "minted"))
 (setq org-latex-listings 'minted)
 
+;; style decision for source code blocks
+(setq org-latex-minted-options
+      '(("bgcolor" "white") ("frame" "lines")))
+
+
 ;; the next section allows to add :ignoreheading: to section headers,
 ;; and the heading will be removed in the latex output, but the section
 ;; itself be included.
