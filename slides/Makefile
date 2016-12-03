@@ -3,7 +3,6 @@ slides.pdf: slides.tex
 
 
 slides.tex: slides.org
-	#./org-files-to-pdf.el slides.org
 	emacs --script ./org-files-to-tex.el *.org
 
 force:
@@ -15,7 +14,6 @@ force:
 clean:
 	rm -f *.tex *.pdf *.tex~
 	rm -rf _minted-*
-	rm -rf .hypothesis
 
 manual:
 	xelatex -shell-escape slides.tex
