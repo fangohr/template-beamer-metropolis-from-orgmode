@@ -24,7 +24,7 @@ docker pull fangohr/latexmetropolisfirasans:2018
 # current directory, so that git can find the root of the
 # repository when executed inside the container.
 docker-pdf:
-	docker run -v `pwd`:/io latexmetropolisfirasans bash -c "cd slides && make slides.pdf"
+	docker run --rm -v `pwd`:/io latexmetropolisfirasans bash -c "cd slides && make slides.pdf"
 
 
 
