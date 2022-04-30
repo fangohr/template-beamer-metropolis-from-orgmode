@@ -1,10 +1,11 @@
-FROM ubuntu:18.04
+FROM ubuntu:22.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get update -y && apt-get install -y python3 python3-dev git pandoc texlive-xetex python3-pip wget unzip
-# # This is a big one. The missing executable was 'xelatex':
-# RUN apt-get install -y pandoc texlive-xetex
+RUN apt-get update -y && apt-get install -y \
+    python3 python3-dev git pandoc texlive-xetex \
+    latexmk python3-pip wget unzip emacs \
+    && rm -rf /var/lib/apt/lists/*
 RUN pip3 install pygments
 
 # Following instructions to install Fira Sans font, taken from
@@ -16,8 +17,6 @@ RUN wget https://github.com/carrois/Fira/archive/master.zip
 RUN unzip master.zip
 RUN find FiraSans-master/ -name "*.otf" -exec cp {} /usr/share/fonts/opentype/fira/ \;
 RUN find FiraSans-master/ -name "*.ttf" -exec cp {} /usr/share/fonts/truetype/fira/ \;
-
-RUN apt-get update -y && apt-get install -y emacs
 
 RUN mkdir -p /io
 WORKDIR /io
