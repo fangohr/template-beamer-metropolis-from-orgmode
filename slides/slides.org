@@ -11,18 +11,18 @@
 #+LATEX_HEADER: \setbeamertemplate{frame footer}{frame footer: \color{lightgray}Insert date or something else here}
 #+LATEX_HEADER: \metroset{block=fill}
 #+LATEX_HEADER: % A number of config options. Remove "%" to activate 
-#+LATEX_HEADER: % \usecolortheme{seahorse}
-#+LATEX_HEADER: %\setbeamercolor{progress bar}{blue}
-#+LATEX_HEADER: \definecolor{UniBlue}{RGB}{83,121,170}
-#+LATEX_HEADER: \definecolor{MPSDBlue2}{RGB}{41,98,144}
-#+LATEX_HEADER: \definecolor{MPSDBlue1}{RGB}{31,91,148}  % darker
-#+LATEX_HEADER: \definecolor{White}{RGB}{255,255,255}
-#+LATEX_HEADER: \definecolor{Black}{RGB}{0,0,0}
-#+LATEX_HEADER: %\setbeamercolor{title}{fg=MPSDBlue1}
-#+LATEX_HEADER: \setbeamercolor{frametitle}{fg=White,bg=MPSDBlue1}
-#+LATEX_HEADER: %\setbeamercolor{structure}{fg=MPSDBlue1}
-#+LATEX_HEADER: \setbeamercolor{progress bar}{fg=MPSDBlue1}
-#+LATEX_HEADER: \setbeamercolor{normal text}{fg=Black}
+#+LATEX_HEADER: %% \usecolortheme{seahorse}
+#+LATEX_HEADER: %%\setbeamercolor{progress bar}{blue}
+#+LATEX_HEADER: %\definecolor{UniBlue}{RGB}{83,121,170}
+#+LATEX_HEADER: %\definecolor{MPSDBlue2}{RGB}{41,98,144}
+#+LATEX_HEADER: %\definecolor{MPSDBlue1}{RGB}{31,91,148}  % darker
+#+LATEX_HEADER: %\definecolor{White}{RGB}{255,255,255}
+#+LATEX_HEADER: %\definecolor{Black}{RGB}{0,0,0}
+#+LATEX_HEADER: %%\setbeamercolor{title}{fg=MPSDBlue1}
+#+LATEX_HEADER: %\setbeamercolor{frametitle}{fg=White,bg=MPSDBlue1}
+#+LATEX_HEADER: %%\setbeamercolor{structure}{fg=MPSDBlue1}
+#+LATEX_HEADER: %\setbeamercolor{progress bar}{fg=MPSDBlue1}
+#+LATEX_HEADER: %\setbeamercolor{normal text}{fg=Black}
 
 
 * Part 1: This document and repository
