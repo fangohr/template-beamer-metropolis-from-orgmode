@@ -1,28 +1,28 @@
 #+TITLE:   Title of presentation
-#+AUTHOR:    Firstname Familyname \hfill \includegraphics[width=2.5cm]{Wikipedia-logo.png}
-#+EMAIL:     emailname@organisat.ion
-#+DATE:      Some department\newline Some institute\newline 20xx-0y-zz
+#+AUTHOR:    Hans Fangohr \hfill \includegraphics[width=2.5cm]{logo-mpsd-english-blue-sans.pdf}
+#+EMAIL:     hans.fangohr@mpsd.mpg.de
+#+DATE:      SSU Computational Science\newline Max Planck Institute for the Structure and Dynamics of Matter\newline Hamburg, Germany\newline 2022-05-12
 #+EMAIL:     Email - doesn't show on titel page by default
 #+LANGUAGE:  en
 #+OPTIONS:   H:2 num:t toc:t \n:nil ::t |:t ^:t -:t f:t *:t tex:t d:(HIDE) tags:not-in-toc <:t
 #+OPTIONS:   d:nil todo:t pri:nil 
 #+STARTUP: beamer
 #+LATEX_HEADER: \usetheme{metropolis}
-#+LATEX_HEADER: \setbeamertemplate{frame footer}{frame footer: \color{lightgray}Insert date or something else here}
+#+LATEX_HEADER: \setbeamertemplate{frame footer}{\color{lightgray}12/05/2022}
 #+LATEX_HEADER: \metroset{block=fill}
 #+LATEX_HEADER: % A number of config options. Remove "%" to activate 
-#+LATEX_HEADER: %% \usecolortheme{seahorse}
-#+LATEX_HEADER: %%\setbeamercolor{progress bar}{blue}
-#+LATEX_HEADER: %\definecolor{UniBlue}{RGB}{83,121,170}
-#+LATEX_HEADER: %\definecolor{MPSDBlue2}{RGB}{41,98,144}
-#+LATEX_HEADER: %\definecolor{MPSDBlue1}{RGB}{31,91,148}  % darker
-#+LATEX_HEADER: %\definecolor{White}{RGB}{255,255,255}
-#+LATEX_HEADER: %\definecolor{Black}{RGB}{0,0,0}
-#+LATEX_HEADER: %%\setbeamercolor{title}{fg=MPSDBlue1}
-#+LATEX_HEADER: %\setbeamercolor{frametitle}{fg=White,bg=MPSDBlue1}
-#+LATEX_HEADER: %%\setbeamercolor{structure}{fg=MPSDBlue1}
-#+LATEX_HEADER: %\setbeamercolor{progress bar}{fg=MPSDBlue1}
-#+LATEX_HEADER: %\setbeamercolor{normal text}{fg=Black}
+#+LATEX_HEADER: % \usecolortheme{seahorse}
+#+LATEX_HEADER: %\setbeamercolor{progress bar}{blue}
+#+LATEX_HEADER: \definecolor{UniBlue}{RGB}{83,121,170}
+#+LATEX_HEADER: \definecolor{MPSDBlue2}{RGB}{41,98,144}
+#+LATEX_HEADER: \definecolor{MPSDBlue1}{RGB}{31,91,148}  % darker
+#+LATEX_HEADER: \definecolor{White}{RGB}{255,255,255}
+#+LATEX_HEADER: \definecolor{Black}{RGB}{0,0,0}
+#+LATEX_HEADER: %\setbeamercolor{title}{fg=MPSDBlue1}
+#+LATEX_HEADER: \setbeamercolor{frametitle}{fg=White,bg=MPSDBlue1}
+#+LATEX_HEADER: \setbeamercolor{structure}{fg=MPSDBlue1}
+#+LATEX_HEADER: \setbeamercolor{progress bar}{fg=MPSDBlue1}
+#+LATEX_HEADER: \setbeamercolor{normal text}{fg=Black}
 
 
 * Part 1: This document and repository
