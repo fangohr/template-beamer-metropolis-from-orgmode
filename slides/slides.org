@@ -111,7 +111,7 @@ This file is licensed under the Creative Commons Attribution-Share Alike 3.0 Unp
 
 ** Standout slide
 :PROPERTIES:
-:BEAMER_opt: label=conclusion,standout
+:BEAMER_opt: standout
 :END:
 
 To highlight a slide as special, we can use the 'standout' attribute.
