@@ -24,6 +24,10 @@
 #+LATEX_HEADER: \setbeamercolor{progress bar}{fg=MPSDBlue1}
 #+LATEX_HEADER: \setbeamercolor{normal text}{fg=Black}
 
+#+LATEX_HEADER: \definecolor{alertred}{RGB}{136,37,80}  % dark red, complements MPSDblue
+#+LATEX_HEADER: \definecolor{examplegreen}{RGB}{28,116,48}  % dark green (could be improved)
+#+LATEX_HEADER: \setbeamercolor{alerted text}{fg=alertred}
+#+LATEX_HEADER: \setbeamercolor{example text}{fg=examplegreen}
 
 * Part 1: This document and repository
 
