@@ -119,9 +119,9 @@ This file is licensed under the Creative Commons Attribution-Share Alike 3.0 Unp
 :BEAMER_env: alertblock
 :END:
 An alert block.
-*** "An example"                                :B_example:
+*** An example                                                    :B_exampleblock:
 :PROPERTIES:
-:BEAMER_env: example
+:BEAMER_env: exampleblock
 :END:
 
 This is an example.
