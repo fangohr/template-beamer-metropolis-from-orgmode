@@ -29,6 +29,9 @@
 #+LATEX_HEADER: \setbeamercolor{alerted text}{fg=alertred}
 #+LATEX_HEADER: \setbeamercolor{example text}{fg=examplegreen}
 
+#+LATEX_HEADER: %\usepackage{amssymb}
+#+LATEX_HEADER: %\usemintedstyle{emacs}
+
 * Part 1: This document and repository
 
 ** This document
