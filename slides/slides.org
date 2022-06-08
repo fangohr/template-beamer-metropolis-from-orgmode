@@ -102,6 +102,12 @@ Downloaded from https://commons.wikimedia.org/wiki/File:Wikipedia-logo.png
 This file is licensed under the Creative Commons Attribution-Share Alike 3.0 Unported license.
 #+end_quote
 
+** Standout slide
+:PROPERTIES:
+:BEAMER_opt: label=conclusion,standout
+:END:
+
+To highlight a slide as special, we can use the 'standout' attribute.
 
 
 
