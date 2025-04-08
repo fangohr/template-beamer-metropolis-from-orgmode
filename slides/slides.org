@@ -1,5 +1,5 @@
 #+TITLE:   Reproducible science and publications with project Jupyter
-#+AUTHOR:    Hans Fangohr \hfill \includegraphics[width=2.5cm]{logo-mpsd-english-blue-sans.pdf}
+#+AUTHOR:    Hans Fangohr \emph{et al} \hfill \includegraphics[width=2.5cm]{logo-mpsd-english-blue-sans.pdf}
 #+EMAIL:     hans.fangohr@mpsd.mpg.de
 #+DATE:      SSU Computational Science\newline Max Planck Institute for the Structure and Dynamics of Matter\newline Hamburg, Germany\newline 2025-04-09
 #+EMAIL:     Email - doesn't show on titel page by default
