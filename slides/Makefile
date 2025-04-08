@@ -5,7 +5,7 @@ slides.tex: slides.org
 	emacs --script ./org-files-to-tex.el slides.org
 
 clean:
-	rm -f *.tex *.pdf *.tex~ slides.nav slides.log slides.out slides.snm slides.toc slides.aux
+	rm -f *.tex slides.pdf *.tex~ slides.nav slides.log slides.out slides.snm slides.toc slides.aux
 	rm -rf _minted-*
 
 manual:
