@@ -1,4 +1,4 @@
-#+TITLE:   Reproducible Science and publications with Project Jupyter
+#+TITLE:   Reproducible science and publications with project Jupyter
 #+AUTHOR:    Hans Fangohr \hfill \includegraphics[width=2.5cm]{logo-mpsd-english-blue-sans.pdf}
 #+EMAIL:     hans.fangohr@mpsd.mpg.de
 #+DATE:      SSU Computational Science\newline Max Planck Institute for the Structure and Dynamics of Matter\newline Hamburg, Germany\newline 2025-04-09
@@ -9,7 +9,7 @@
 #+OPTIONS:   d:nil todo:t pri:nil 
 #+STARTUP: beamer
 #+LATEX_HEADER: \usetheme{metropolis}
-#+LATEX_HEADER: \setbeamertemplate{frame footer}{\color{lightgray}12/05/2022}
+#+LATEX_HEADER: \setbeamertemplate{frame footer}{\color{lightgray}EMMC 2025 09/04/2025}
 #+LATEX_HEADER: \metroset{block=fill}
 #+LATEX_HEADER: % A number of config options. Remove "%" to activate 
 #+LATEX_HEADER: % \usecolortheme{seahorse}
@@ -38,21 +38,27 @@
 @@latex:\centerline{\includegraphics[width=1.1\textwidth]{images/binder-example.png}}@@
 
 * Summary: Reproducible publications with Jupyter
-
-- Proposal:
-  - publish binder-enabled repository with paper
-  - include one Jupyter notebook per figure
-  - immediately useable for all Python-based software
-
-- Binder provides zero-install notebook execution
-  - also for software documentation, tutorials, workshops
-
-- Example repository at https://github.com/fangohr/reproducibility-repository-example
+\small
+Proposal for publication: publish git repository
+- with one \emph{Jupyter notebook} per figure \hfill  $\rightarrow$ preserves "workflow"
+- \emph{binder-enable} repository \hfill $\rightarrow$ preserves "software specification"
 
 -----------------
 
-@@latex:\url{https://s.gwdg.de/BlqHlH} \vfill \includegraphics[width=2cm]{images/qr-code2.png}@@
+Example repository for ~figure1.pdf~ \hfill\includegraphics[width=4.2cm]{images/figure1.pdf}
+\newline at @@latex:{\footnotesize \url{https://github.com/fangohr/reproducibility-repository-example}}@@
 
-* test
+
+-----------------
+
+@@latex:\parbox{1\textwidth}{Poster online at \hfill \url{https://s.gwdg.de/BlqHlH} \hfill \includegraphics[width=1.8cm]{images/qr-code2.png}}@@
+
+* 
 
 @@latex:\centerline{\includegraphics[width=1.1\textwidth]{images/poster.pdf}}@@
+
+* COMMENT
+
+2. Binder provides zero-install notebook execution
+  - also for software documentation, tutorials, workshops
+
